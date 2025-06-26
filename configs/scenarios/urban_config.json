@@ -1,0 +1,43 @@
+{
+  "detector": {
+    "model_path": "models/fine_tuned/yolov9_urban.pt",
+    "device": "auto",
+    "conf_threshold": 0.4,
+    "iou_threshold": 0.5,
+    "target_classes": [2, 3, 5, 7],
+    "img_size": 640,
+    "half_precision": true
+  },
+  "tracker": {
+    "feature_extractor_path": "models/pretrained/urban_reid.pt",
+    "max_cosine_distance": 0.15,
+    "nn_budget": 150,
+    "max_age": 20,
+    "n_init": 4,
+    "max_iou_distance": 0.6,
+    "device": "auto"
+  },
+  "velocity": {
+    "calibration_file": "configs/calibration/urban_calibration.json",
+    "fps": 30.0,
+    "smoothing_window": 4,
+    "min_track_length": 4,
+    "max_track_age": 1.5,
+    "outlier_threshold": 1.5,
+    "velocity_smoothing": "kalman"
+  },
+  "input": {
+    "resize_width": 1280,
+    "resize_height": 720,
+    "frame_skip": 0
+  },
+  "optimization": {
+    "use_fp16": true,
+    "batch_size": 1,
+    "num_threads": 4
+  },
+  "logging": {
+    "level": "DEBUG",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "camera_matrix": [
+    [640.0, 0.0, 320.0],
+    [0.0, 640.0, 240.0],
+    [0.0, 0.0, 1.0]
+  ],
+  "dist_coeffs": [0.0, 0.0, 0.0, 0.0, 0.0],
+  "homography_matrix": [
+    [1.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0],
+    [0.0, 0.0, 1.0]
+  ],
+  "image_size": [640, 480],
+  "ground_plane_normal": [0.0, 0.0, 1.0],
+  "ground_plane_point": [0.0, 0.0, 0.0],
+  "pixel_to_meter_ratio": 0.1,
+  "calibration_info": {
+    "description": "Simple calibration using only pixel-to-meter scaling",
+    "camera_height_meters": 3.0,
+    "camera_angle_degrees": 0.0,
+    "focal_length_mm": 4.0,
+    "calibration_date": "2024-01-01",
+    "notes": "Identity transforms - for basic testing and edge deployment"
+  }
+}

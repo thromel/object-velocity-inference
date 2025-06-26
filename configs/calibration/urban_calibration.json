@@ -1,0 +1,25 @@
+{
+  "camera_matrix": [
+    [900.0, 0.0, 640.0],
+    [0.0, 900.0, 360.0],
+    [0.0, 0.0, 1.0]
+  ],
+  "dist_coeffs": [0.15, -0.3, 0.0, 0.0, 0.0],
+  "homography_matrix": [
+    [1.1, 0.2, -30.0],
+    [0.1, 1.3, -80.0],
+    [0.0, 0.0012, 1.0]
+  ],
+  "image_size": [1280, 720],
+  "ground_plane_normal": [0.0, 0.0, 1.0],
+  "ground_plane_point": [0.0, 0.0, 0.0],
+  "pixel_to_meter_ratio": 0.08,
+  "calibration_info": {
+    "description": "Urban intersection monitoring calibration",
+    "camera_height_meters": 4.0,
+    "camera_angle_degrees": 25.0,
+    "focal_length_mm": 6.0,
+    "calibration_date": "2024-01-01",
+    "notes": "Close-range monitoring with higher perspective distortion"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "detector": {
+    "model_path": "models/pretrained/yolov9_vehicles.pt",
+    "device": "auto",
+    "conf_threshold": 0.5,
+    "iou_threshold": 0.45,
+    "target_classes": [2, 3, 5, 7],
+    "img_size": 640,
+    "half_precision": true
+  },
+  "tracker": {
+    "feature_extractor_path": null,
+    "max_cosine_distance": 0.2,
+    "nn_budget": 100,
+    "max_age": 30,
+    "n_init": 3,
+    "max_iou_distance": 0.7,
+    "device": "auto"
+  },
+  "velocity": {
+    "calibration_file": "configs/calibration/default_calibration.json",
+    "fps": 30.0,
+    "smoothing_window": 5,
+    "min_track_length": 3,
+    "max_track_age": 2.0,
+    "outlier_threshold": 2.0,
+    "velocity_smoothing": "kalman"
+  },
+  "input": {
+    "resize_width": null,
+    "resize_height": null,
+    "frame_skip": 0
+  },
+  "optimization": {
+    "use_fp16": true,
+    "batch_size": 1,
+    "num_threads": 4
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "detector": {
+    "model_path": "models/fine_tuned/yolov9_highway.pt",
+    "device": "auto",
+    "conf_threshold": 0.6,
+    "iou_threshold": 0.4,
+    "target_classes": [2, 3, 5, 7],
+    "img_size": 640,
+    "half_precision": true
+  },
+  "tracker": {
+    "feature_extractor_path": "models/pretrained/highway_reid.pt",
+    "max_cosine_distance": 0.3,
+    "nn_budget": 100,
+    "max_age": 50,
+    "n_init": 2,
+    "max_iou_distance": 0.8,
+    "device": "auto"
+  },
+  "velocity": {
+    "calibration_file": "configs/calibration/highway_calibration.json",
+    "fps": 30.0,
+    "smoothing_window": 7,
+    "min_track_length": 2,
+    "max_track_age": 3.0,
+    "outlier_threshold": 3.0,
+    "velocity_smoothing": "polynomial"
+  },
+  "input": {
+    "resize_width": 1280,
+    "resize_height": 720,
+    "frame_skip": 0
+  },
+  "optimization": {
+    "use_fp16": true,
+    "batch_size": 2,
+    "num_threads": 6
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

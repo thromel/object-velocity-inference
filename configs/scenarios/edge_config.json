@@ -1,0 +1,43 @@
+{
+  "detector": {
+    "model_path": "models/pretrained/yolov9_lite.pt",
+    "device": "cpu",
+    "conf_threshold": 0.5,
+    "iou_threshold": 0.45,
+    "target_classes": [2, 3, 5, 7],
+    "img_size": 416,
+    "half_precision": false
+  },
+  "tracker": {
+    "feature_extractor_path": null,
+    "max_cosine_distance": 0.3,
+    "nn_budget": 50,
+    "max_age": 20,
+    "n_init": 3,
+    "max_iou_distance": 0.7,
+    "device": "cpu"
+  },
+  "velocity": {
+    "calibration_file": "configs/calibration/simple_calibration.json",
+    "fps": 15.0,
+    "smoothing_window": 3,
+    "min_track_length": 3,
+    "max_track_age": 2.0,
+    "outlier_threshold": 2.0,
+    "velocity_smoothing": "moving_average"
+  },
+  "input": {
+    "resize_width": 640,
+    "resize_height": 480,
+    "frame_skip": 1
+  },
+  "optimization": {
+    "use_fp16": false,
+    "batch_size": 1,
+    "num_threads": 2
+  },
+  "logging": {
+    "level": "WARNING",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

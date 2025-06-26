@@ -1,0 +1,25 @@
+{
+  "camera_matrix": [
+    [800.0, 0.0, 640.0],
+    [0.0, 800.0, 360.0],
+    [0.0, 0.0, 1.0]
+  ],
+  "dist_coeffs": [0.1, -0.2, 0.0, 0.0, 0.0],
+  "homography_matrix": [
+    [1.2, 0.1, -50.0],
+    [0.0, 1.5, -100.0],
+    [0.0, 0.001, 1.0]
+  ],
+  "image_size": [1280, 720],
+  "ground_plane_normal": [0.0, 0.0, 1.0],
+  "ground_plane_point": [0.0, 0.0, 0.0],
+  "pixel_to_meter_ratio": 0.05,
+  "calibration_info": {
+    "description": "Default calibration for general traffic monitoring",
+    "camera_height_meters": 5.0,
+    "camera_angle_degrees": 15.0,
+    "focal_length_mm": 8.0,
+    "calibration_date": "2024-01-01",
+    "notes": "Approximate values for testing - replace with actual calibration"
+  }
+}
