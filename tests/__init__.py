@@ -1,0 +1,1 @@
+"""Test suite for the vehicle velocity inference system."""

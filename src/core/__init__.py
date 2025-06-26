@@ -1,0 +1,1 @@
+"""Core components for video processing and data handling."""
